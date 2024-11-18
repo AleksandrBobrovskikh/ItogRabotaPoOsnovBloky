@@ -7,6 +7,15 @@ public class Main {
                 count++;
             }
         }
-        System.out.println(count);
+        String[] goodArray = new String[count];
+
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < goodArray.length; j++) {
+                if (data[i].length() < 4 && goodArray[j] == null) {
+                    goodArray[j] = data[i];
+                    break;
+                }
+            }
+        }
     }
 }
